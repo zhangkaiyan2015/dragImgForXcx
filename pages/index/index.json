@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "imgDarg":"/components/imgTool/imgDarg"
+  }
 }
