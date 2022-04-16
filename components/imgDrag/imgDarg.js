@@ -24,7 +24,13 @@ Component({
             url: 'https://img0.baidu.com/it/u=553569124,3531403696&fm=253&fmt=auto&app=120&f=JPEG?w=960&h=600',
         }, {
             url: 'https://img2.baidu.com/it/u=2334262643,3069614641&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500',
-        }]
+        }, {
+            url: 'https://img0.baidu.com/it/u=985192759,2265250910&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333',
+        }, {
+            url: 'https://img1.baidu.com/it/u=3316754777,2519856621&fm=253&fmt=auto&app=138&f=JPEG?w=653&h=500',
+        }, {
+            url: 'https://img1.baidu.com/it/u=3316754777,2519856621&fm=253&fmt=auto&app=138&f=JPEG?w=653&h=500',
+        },]
     },
     lifetimes: {
         ready() {

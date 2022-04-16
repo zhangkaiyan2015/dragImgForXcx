@@ -28,23 +28,9 @@ Component({
             url: 'https://img0.baidu.com/it/u=985192759,2265250910&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333',
         }, {
             url: 'https://img1.baidu.com/it/u=3316754777,2519856621&fm=253&fmt=auto&app=138&f=JPEG?w=653&h=500',
-        },{
-            url: 'https://img0.baidu.com/it/u=3879724579,2384271901&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=675',
-        }, {
-            url: 'https://img0.baidu.com/it/u=2775655496,2255017447&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800',
-        }, {
-            url: 'https://img1.baidu.com/it/u=4127991555,3421789262&fm=253&fmt=auto&app=138&f=JPEG?w=680&h=454',
-        }, {
-            url: 'https://img2.baidu.com/it/u=4167581070,3859984764&fm=253&fmt=auto&app=138&f=JPEG?w=752&h=500',
-        }, {
-            url: 'https://img0.baidu.com/it/u=553569124,3531403696&fm=253&fmt=auto&app=120&f=JPEG?w=960&h=600',
-        }, {
-            url: 'https://img2.baidu.com/it/u=2334262643,3069614641&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500',
-        }, {
-            url: 'https://img0.baidu.com/it/u=985192759,2265250910&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333',
         }, {
             url: 'https://img1.baidu.com/it/u=3316754777,2519856621&fm=253&fmt=auto&app=138&f=JPEG?w=653&h=500',
-        }]
+        },]
     },
     lifetimes: {
         ready() {

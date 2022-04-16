@@ -1,3 +1,4 @@
 <!--index.wxml-->
 
-<imgDarg />
+<navigator class="a-tag" url="/pages/index/index1">首张图片放大，其他图片正常大小</navigator>
+<navigator class="a-tag" url="/pages/index/index2">普通图片拖拽(支持任意列数，配置参数在相应的wxs更改)</navigator>

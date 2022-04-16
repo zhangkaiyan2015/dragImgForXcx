@@ -1,1 +1,10 @@
 /**index.wxss**/
+.a-tag{
+    background-color: #ffffff;
+    padding: 30rpx 20rpx;
+    border-bottom: 1px solid #eee;
+    font-size: 30rpx;
+}
+page{
+    background-color: #f6f6f6;
+}

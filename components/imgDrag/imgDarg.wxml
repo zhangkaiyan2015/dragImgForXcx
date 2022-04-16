@@ -1,0 +1,9 @@
+<!--components/imgTool/imgDarg.wxml-->
+<wxs src='./imgDarg.wxs' module="imgUtil"></wxs>
+<view catchtouchmove>
+    <view class="img-view" id="imgView" change:prop="{{imgUtil.setHeight}}" prop="{{imgs}}">
+        <view class="img-box" id='img-{{item.sort}}' wx:for="{{imgs}}" wx:key="index" bindtouchmove="{{imgUtil.getViewPositon}}" data-key="{{item.sort}}" bindtouchend="{{imgUtil.setViewPosition}}" change:prop="{{imgUtil.setStyle}}" prop="{{item.sort}}" bindtouchstart="{{imgUtil.setViewBasePosition}}" bindtap="click">
+            <image src="{{item.url}}" class="img" mode="aspectFill"></image>
+        </view>
+    </view>
+</view>
