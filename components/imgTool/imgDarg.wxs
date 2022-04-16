@@ -123,7 +123,10 @@ function setViewPosition(event, ownerInstance) {
     if (!isDrag) {
         return;
     }
-    ownerInstance.callMethod('abledMethod')
+    ownerInstance.setTimeout(function () {
+        ownerInstance.callMethod('abledMethod')
+    }, 200)
+   
     isDrag = false;
     ownerInstance.setTimeout(function () {
         var sort = event.currentTarget.dataset.key;
