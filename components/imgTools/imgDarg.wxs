@@ -8,13 +8,18 @@ var left = 0;
 var right = 0;
 var bottom = 0;
 var columns = 3; // 总共几列
-var rows = 3; //总共几行
+var imgHeight = 212 // 小图片高度（rpx）
 var selectKey = 0; //当前选中的item
 var x = 0;
 var y = 0;
 var isDrag = false; // 是否能进行拖动
 var timer = null;
-
+function setHeight(imgs,oldValue, ownerInstance){
+    var totalRows = parseInt((imgs.length - 1) / columns) + 2;
+    var tag = ownerInstance.selectComponent('#imgView');
+    var style = 'height:'+ totalRows * imgHeight + 'rpx';
+    tag.setStyle(style)
+}
 function _getIndex(clientX, clientY) {
     var start_x = Math.round(clientX / width);
     var start_y = Math.round(clientY / height);
@@ -139,7 +144,7 @@ function setStyle(sort, oldValue, ownerInstance, instance) {
     var tag = ownerInstance.selectComponent('#img-' + sort);
     var style = '';
     if (sort == 0) {
-        style = 'transform:translate3d(0%, 0%, 0);width:66.6%;height:420rpx;transition: all 0.3s';
+        style = 'transform:translate3d(0%, 0%, 0);width:'+ 100 / columns * 2 +'%;height:'+ imgHeight * 2 +'rpx;transition: all 0.3s';
     } else {
         if (sort == 1) {
             x = 200
@@ -148,10 +153,12 @@ function setStyle(sort, oldValue, ownerInstance, instance) {
             x = 200
             y = 100
         } else {
-            x = 100 * (sort - 3) * (rows - 2)
-            y = 200
+            var currentRowIndex = parseInt(sort / (columns)) + 1;
+            var currentColumnIndex = sort - (currentRowIndex - 1) * columns;
+            x = 100 * currentColumnIndex
+            y = currentRowIndex * 100
         }
-        style = 'transform:translate3d(' + x + '%, ' + y + '%, 0);width:33.3%;height:212rpx;transition: all 0.3s';
+        style = 'transform:translate3d(' + x + '%, ' + y + '%, 0);width:'+100 / columns +'%;height:' + imgHeight + 'rpx;transition: all 0.3s';
     }
     tag.setStyle(style)
 
@@ -160,5 +167,6 @@ module.exports = {
     getViewPositon: getViewPositon,
     setViewPosition: setViewPosition,
     setViewBasePosition: setViewBasePosition,
-    setStyle: setStyle
+    setStyle: setStyle,
+    setHeight:setHeight
 }
